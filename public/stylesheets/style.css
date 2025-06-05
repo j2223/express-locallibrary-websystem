@@ -1,5 +1,94 @@
 .sidebar-nav {
-  margin-top: 20px;
+  margin-top: 24px;
   padding: 0;
   list-style: none;
+  background: #ecf0f1;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.06);
+  padding: 1.2rem 0.8rem;
+}
+
+.sidebar-nav li {
+  margin: 1rem 0;
+}
+
+.sidebar-nav a {
+  color: #34495e;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5em 0.8em;
+  border-radius: 6px;
+  display: block;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sidebar-nav a:hover {
+  background: #27ae60;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* メインコンテンツをおしゃれに */
+.main-content {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 32px rgba(44, 62, 80, 0.13);
+  padding: 2.5rem 2rem;
+  max-width: 900px;
+  margin: 2.5rem auto;
+  font-size: 1.08rem;
+  line-height: 1.85;
+  color: #2d3436;
+}
+
+/* 見出しデザイン */
+.main-content h1, .main-content h2, .main-content h3 {
+  color: #27ae60;
+  border-left: 6px solid #27ae60;
+  padding-left: 0.7em;
+  background: linear-gradient(90deg, #eafaf1 60%, transparent 100%);
+  border-radius: 4px;
+  margin-top: 2.2rem;
+  margin-bottom: 1.1rem;
+}
+
+/* 本文内リンク */
+.main-content a {
+  color: #2980b9;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.main-content a:hover {
+  color: #27ae60;
+  text-decoration: underline;
+}
+
+/* 本文内リスト */
+.main-content ul, .main-content ol {
+  padding-left: 2em;
+  margin-bottom: 1.5em;
+}
+
+.main-content li {
+  margin-bottom: 0.5em;
+}
+
+/* 本文内テーブル */
+.main-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  background: #f9fafb;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.05);
+}
+.main-content th, .main-content td {
+  padding: 0.9em 1em;
+  border-bottom: 1px solid #e1e1e1;
+}
+.main-content th {
+  background: #ecf0f1;
+  color: #34495e;
+  font-weight: bold;
 }
