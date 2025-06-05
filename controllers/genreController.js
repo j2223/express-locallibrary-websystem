@@ -8,7 +8,7 @@ const asyncHandler = require("express-async-handler");
 exports.genre_list = asyncHandler(async (req, res, next) => {
   const allGenres = await Genre.find().sort({ name: 1 }).exec();
   res.render("genre_list", {
-    title: "Genre List",
+    title: "ジャンル一覧",
     list_genres: allGenres,
   });
 });
@@ -159,7 +159,7 @@ exports.genre_update_post = [
     if (!errors.isEmpty()) {
       // There are errors. Render the form again with sanitized values and error messages.
       res.render("genre_form", {
-        title: "Update Genre",
+        title: "ジャンルの更新",
         genre: genre,
         errors: errors.array(),
       });

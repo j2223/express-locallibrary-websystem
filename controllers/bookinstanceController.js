@@ -9,7 +9,7 @@ exports.bookinstance_list = asyncHandler(async (req, res, next) => {
   const allBookInstances = await BookInstance.find().populate("book").exec();
 
   res.render("bookinstance_list", {
-    title: "Book Instance List",
+    title: "ブックインスタンスリスト",
     bookinstance_list: allBookInstances,
   });
 });
@@ -28,7 +28,7 @@ exports.bookinstance_detail = asyncHandler(async (req, res, next) => {
   }
 
   res.render("bookinstance_detail", {
-    title: "Book:",
+    title: "著作:",
     bookinstance: bookInstance,
   });
 });
@@ -76,7 +76,7 @@ exports.bookinstance_create_post = [
       const allBooks = await Book.find({}, "title").sort({ title: 1 }).exec();
 
       res.render("bookinstance_form", {
-        title: "Create BookInstance",
+        title: "ブックインスタンス追加",
         book_list: allBooks,
         selected_book: bookInstance.book._id,
         errors: errors.array(),
@@ -103,7 +103,7 @@ exports.bookinstance_delete_get = asyncHandler(async (req, res, next) => {
   }
 
   res.render("bookinstance_delete", {
-    title: "Delete BookInstance",
+    title: "ブックインスタンス削除",
     bookinstance: bookInstance,
   });
 });
@@ -131,7 +131,7 @@ exports.bookinstance_update_get = asyncHandler(async (req, res, next) => {
   }
 
   res.render("bookinstance_form", {
-    title: "Update BookInstance",
+    title: "ブックインスタンス更新",
     book_list: allBooks,
     selected_book: bookInstance.book._id,
     bookinstance: bookInstance,
@@ -173,7 +173,7 @@ exports.bookinstance_update_post = [
       const allBooks = await Book.find({}, "title").exec();
 
       res.render("bookinstance_form", {
-        title: "Update BookInstance",
+        title: "ブックインスタンス更新",
         book_list: allBooks,
         selected_book: bookInstance.book._id,
         errors: errors.array(),
